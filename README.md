@@ -4,8 +4,7 @@ Obsidian plugin that imports the [Alpine.js](https://alpinejs.dev/) node [packag
 
 ## notice
 
-
-> [!warning] NOTICE
+> ⚠️ NOTICE
 > 
 > This plugin grants access to Obsidian's API and all of it's methods. Misuse (i.e. ignorance of the effects of running certain commands) could have detrimental effects, including, but not limited to, the loss of data. THIS PLUGIN IS FOR ADVANCED USE ONLY. 
 > 
