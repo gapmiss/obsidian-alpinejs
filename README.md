@@ -23,8 +23,8 @@ e.g. `<span data-x-data="{}">`
 
 ```html
 <div data-x-data="{ open: false }">
-	<button data-x-on:click="open = true">Expand</button>
-	<div data-x-show="open">lorem ipsum dolor sit amet ...</div>
+  <button data-x-on:click="open = true">Expand</button>
+  <div data-x-show="open">lorem ipsum dolor sit amet ...</div>
 </div>
 ```
 
@@ -55,8 +55,8 @@ npm run dev
 ## caveats
 
 1. Javascript errors after adding new or editing current `Alpine.js` HTML blocks
-	- solution: run command `reload app without saving`
-	- or: close (`⇧` + `⌘` + `W`) and re-open vault window
+  - solution: run command `reload app without saving`
+  - or: close (`⇧` + `⌘` + `W`) and re-open vault window
 
 ## examples
 
@@ -64,19 +64,19 @@ npm run dev
 
 ```html
 <button data-x-data="{ label: 'I ❤️ Alpine' }"
-	data-x-text="label"
-	data-x-on:click="new Notice('I ❤️ Alpine', 3377);
-		var a = this.app;
-		console.log(a);
-		console.log(a.workspace.containerEl);
-		console.log(a.vault.getName());
-		var vault = a.vault.getName();
-		new Notice('Vault name: ' + vault, 0);
-		var path = a.workspace.getActiveFile().path;
-		var root = a.vault.getRoot();
-		console.log(path);
-		console.log(root);
-		new Notice('Note path: ' + path, 3377);">
+  data-x-text="label"
+  data-x-on:click="new Notice('I ❤️ Alpine', 3377);
+    var a = this.app;
+    console.log(a);
+    console.log(a.workspace.containerEl);
+    console.log(a.vault.getName());
+    var vault = a.vault.getName();
+    new Notice('Vault name: ' + vault, 0);
+    var path = a.workspace.getActiveFile().path;
+    var root = a.vault.getRoot();
+    console.log(path);
+    console.log(root);
+    new Notice('Note path: ' + path, 3377);">
 </button>
 ```
 
@@ -86,12 +86,12 @@ npm run dev
 
 ```html
 <button data-x-data="{ state: false, label: (this.app.vault.getConfig('theme') == 'moonstone') ? 'dark' : 'light' }"
-	data-x-init="console.log('init');"
-	data-x-on:click="
-		state = !state;
-		this.app.changeTheme( (this.app.vault.getConfig('theme') == 'moonstone') ? 'obsidian' : 'moonstone' );"
-	data-x-bind:class="{ 'dark': state }"
-	id="theme-toggler">
+  data-x-init="console.log('init');"
+  data-x-on:click="
+    state = !state;
+    this.app.changeTheme( (this.app.vault.getConfig('theme') == 'moonstone') ? 'obsidian' : 'moonstone' );"
+  data-x-bind:class="{ 'dark': state }"
+  id="theme-toggler">
 </button>
 ```
 
@@ -101,32 +101,32 @@ npm run dev
 
 ```html
 <div data-x-data="{users: []}" 
-	data-x-init="await fetch('https://jsonplaceholder.typicode.com/users')
-		.then(response => response.json())
-		.then(data => users = data)">
-	<div>
-		<template data-x-for="user in users"
-			:key="user.id">
-			<div style="display:inline-block; 
-				width:50%;
-				padding: .77em;">
-				<div style="border-radius:10px; 
-					padding: .77em;
-					border: 1px solid #47A477;
-					border-radius: 1em;">
-					<div>
-						<div data-x-text="user.name"></div>
-						<div data-x-text="user.company.name"></div>
-						<div data-x-text="user.phone"></div>
-						<a data-x-bind:href="'mailto:' + user.email" 
-							data-x-text="user.email"></a>     
-						<a data-x-bind:href="'https://' + user.website" 
-							data-x-text="user.website"></a>
-					</div>
-				</div>
-			</div>
-		</template>
-	</div>
+  data-x-init="await fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(data => users = data)">
+  <div>
+    <template data-x-for="user in users"
+      :key="user.id">
+      <div style="display:inline-block; 
+        width:50%;
+        padding: .77em;">
+        <div style="border-radius:10px; 
+          padding: .77em;
+          border: 1px solid #47A477;
+          border-radius: 1em;">
+          <div>
+            <div data-x-text="user.name"></div>
+            <div data-x-text="user.company.name"></div>
+            <div data-x-text="user.phone"></div>
+            <a data-x-bind:href="'mailto:' + user.email" 
+              data-x-text="user.email"></a>     
+            <a data-x-bind:href="'https://' + user.website" 
+              data-x-text="user.website"></a>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
 </div>
 ```
 
@@ -136,10 +136,10 @@ npm run dev
 
 ```html
 <h1 data-x-data="{ 
-		self: '<span class=self>I</span>',
-		palette: '<span style=color:red>❤️</span>',
-		framework: '<strong><em>Alpine</em></strong>'}" 
-	style="font-size:3.77em;">
+    self: '<span class=self>I</span>',
+    palette: '<span style=color:red>❤️</span>',
+    framework: '<strong><em>Alpine</em></strong>'}" 
+  style="font-size:3.77em;">
     <span data-x-html="self"></span> 
     <span data-x-html="palette"></span> 
     <span data-x-html="framework"></span>
