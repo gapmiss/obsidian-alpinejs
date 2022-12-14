@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-alpinejs",
+	"name": "Alpine.js",
+	"version": "0.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "Alpine.js framework for Obsidian.",
+	"author": "gapmiss",
+	"authorUrl": "https://github.com/gapmiss/obsidian-alpinejs",
+	"isDesktopOnly": false
+}
