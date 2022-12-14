@@ -55,8 +55,8 @@ npm run dev
 ## caveats
 
 1. Javascript errors after adding new or editing current `Alpine.js` HTML blocks
-  - solution: run command `reload app without saving`
-  - or: close (`⇧` + `⌘` + `W`) and re-open vault window
+	- solution: run command `reload app without saving`
+	- or: close (`⇧` + `⌘` + `W`) and re-open vault window
 
 ## examples
 
